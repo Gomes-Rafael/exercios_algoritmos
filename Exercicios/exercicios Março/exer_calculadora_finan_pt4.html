@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite o valor da base do triangulo: <input id="inBase"><br><br>
+    <button onclick="calcular()">Calcular!</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function calcular(){
+    var base = Number(inBase.value)
+    var altura = Number((2 * base) - 1)
+    var lado1 = Number((base * 3) + 1)
+    var lado2 = Number((altura * 2) + 1)
+    span1.innerHTML = `A altura do triangulo é ${altura}<br>
+    O primeiro lado do retangulo é ${lado1}<br>
+    O segundo lado do retangulo é ${lado2}<br><br>
+    A área verde é de ${x}, pois o triangulo tem área de ${x} e o retângulo tem área de ${x}.`
+}
+</script>
+<!--
+    4) Construa um programa para calcular a área verde da imagem abaixo sabendo que:
+
+a) A base do triângulo será um valor informado (input);
+
+b) A altura do triângulo é duas vezes a base - 1;
+
+c) Um dos lados do retângulo é três vezes a base do triângulo + 1;
+
+d) O outro lado do retângulo é duas vezes a altura do triângulo + 1;
+
+
+
+Faça os cálculos necessários e emita a mensagem abaixo para cada base informada, sem apagar as mensagem anteriores. 
+
+A área verde é de XXm2, pois o triangulo tem área de YYm2 e o retângulo tem área de ZZm2.
+
+
+
+#ficadica1: a área do triangulo é base * altura / 2 e a do retângulo é base * lateral;
+
+#ficadica2: "m2" significa metros quadrados...
+-->

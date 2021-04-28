@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a quantidade de infrações cometidas: <input id="inputQntdInfracoes"><br><br>
+    Digite o valor em que o carro está avaliado: <input id="inputValorCarro"><br><br>
+    <button onclick="calcSeguro()">Calcular Seguro</button>
+
+</body>
+</html>
+<script>
+    function calcSeguro(){
+        var qntdInfracoes = Number(inputQntdInfracoes.value);
+        var valorCarro = Number(inputValorCarro.value);
+        var taxa = 0.015;
+        if (qntdInfracoes <= 3){
+        var taxa = 0.010;
+        }
+        var valorSeguro = valorCarro * taxa;
+        
+        alert (`O valor total do seguro será de: ${valorSeguro}`);
+    }
+</script>

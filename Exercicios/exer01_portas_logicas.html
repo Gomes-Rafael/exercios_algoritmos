@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<select id="sel_ruaA">
+    <option value="0">Parado</option>
+    <option value="1">Andando</option>
+</select><br>
+<select id="sel_ruaB">
+    <option value="0">Parado</option>
+    <option value="1">Andando</option>
+</select><br><br>
+<button onclick="simular()">Simular!</button><br><br>
+<span id="span1"></span>
+</body>
+</html>
+<script>
+function simular(){
+    var ruaA = Number(sel_ruaA.value)
+var ruaB = Number(sel_ruaB.value)
+if(ruaA == 1 && ruaB == 1){
+alert("Risco de colisão!")
+}if(ruaA == 0 && ruaB == 0){
+alert("Risco de engarrafamento!")
+}else{
+    span1.innerHTML = "Fluxo perfeito!"
+}
+}
+</script>
+<!--
+1) Crie um programa em HTML/JS que ajudará a secretaria de trânsito da cidade de São Paulo a simular o fluxo de um semáforo em certa avenida:
+
+a) Tenha uma lista para a "Rua A", com duas opções:
+    a.1) <option value="0">Parado</option>;
+    a.2) <option value="1">Andando</option>;
+
+b) Tenha uma lista para a "Rua B", com duas opções:
+    b.1) <option value="0">Parado</option>;
+    b.2) <option value="1">Andando</option>;
+
+c) Ao clicar em "Simular":
+    c.1) Informe ao usuário do programa se o fluxo de carros está adequado, obedecendo as seguintes regras:
+    c.2) Se os dois fluxos estiverem andando, informe: "Risco de Colisão";
+    c.3) Se os dois fluxos estiverem parados, informe: "Risco de engarrafamento";
+    c.4) Caso contrário, informe "Fluxo perfeito";
+-->

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select_DC">
+        <option id="coringa"  value="coringa">Coringa</option>
+        <option id="superman"  value="superman">Superman</option>
+        <option id="vs"  value="vs">Superman vs Batman</option>
+    </select>
+    <br><br>
+    <select id="select_marvel">
+        <option id="capi"  value="capi">Capitão America</option>
+        <option id="aquele"  value="aquele">Aquele do vilão Roxo</option>
+        <option id="ultimato"  value="ultimato">Ultimato</option>
+    </select>
+    <br><br> <button onclick="verificar()">Verificar!</button>
+</body>
+</html>
+<script>
+    var corin = 10;
+    var sup = 9;
+    var vs = 8;
+    var capi = 8;
+    var aq = 6; 
+    var ulti = 5;
+    function verificar() {
+        if(select_DC.value == coringa ){
+            alert(`as notas dos filmes são: ${coringa.innerHTML} = ${corin}`)
+}if(select_DC.value == superman ){
+            alert(`as notas dos filmes são: ${superman.innerHTML} = ${corin}`)
+}
+        }
+    }
+function verificar(){
+alert(`as notas dos filmes são: ${capi.innerHTML} = ${}`)
+}
+</script>
+<!--
+  2) Crie um programa em HTML/JS o qual:
+
+a) Tenha uma combobox com os melhores filmes da DC;
+b) Tenha uma outra lista com os melhores filmes da Marvel;
+c) Ao selecionar um filme da DC e outro da Marvel e clicar em "Ver notas":
+    c.1) Mostre, em um alert, as notas daqueles filmes no IMDB (pode inventar, não precisa ser a nota real);
+    c.2) Mostre também as opções selecionadas, ex:
+        "O filme X tem uma nota de Y e o filme Z tem uma nota de K no IMDB";
+    c.3) Mostre, em outro alert, em qual porcentagem o filme A é superior ao filme B;
+d) Mostre, na página, uma imagem dos dois filmes selecionados;
+-->

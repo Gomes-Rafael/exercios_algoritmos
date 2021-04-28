@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 07, if e Else</title>
+</head>
+<body style="color: hotpink; background-color: rgb(63, 63, 63);">
+    Quanto tempo o arroz ficou cozinhando? <input id="in_tempo_cozimento"><br><br>
+    <button onclick="verificar()">Prova Arroz</button><br><br>
+<span id="span1"></span>
+</body>
+</html>
+<script>
+function verificar(){
+    var tempo = Number(in_tempo_cozimento.value);
+    if (tempo != 5){
+        span1.innerHTML = `Arroz cru ou cozido demais!<br>`;
+        span1.innerHTML += `<img src="https://culinaria.culturamix.com/blog/wp-content/uploads/2020/06/Arroz-Queimou-1.jpg">`
+    }else{
+        span1.innerHTML = `parabens! Arroz perfeito!<br>`;
+        span1.innerHTML += `<img src="https://img.itdg.com.br/tdg/images/blog/uploads/2017/07/shutterstock_400550344-300x190.jpg">`
+    }
+}
+</script>
+<!--
+    7. Crie um programa em HTML/JS o qual:
+a) Pergunta o tempo que deixou o arroz cozinhando;
+b) Ao clicar em "Provar arroz", verifica se o cozimento foi perfeito. Um cozimento perfeito é de 5 minutos, exatamente;
+c) Caso o cozimento tenha sido perfeito, exiba a frase "Parabéns! Arroz perfeito!" e, abaixo dela, a imagem de um bonito arroz;
+Caso contrário, exiba a frase "Arroz cru ou cozido demais!" e, abaixo dela, a imagem de um arroz "empapado" ou queimado;
+-->

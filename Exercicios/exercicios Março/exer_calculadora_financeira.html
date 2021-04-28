@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+    Digite os metros de cano que serão colocados: <input id="metrosCano"><br>
+    <button id="calcularOrcamento" onclick="calcOrcamento()">Calcular orçamento</button><br>
+    <span id="span1"></span><br>
+    <span id="span2"></span><br>
+    <span id="span3"></span>
+</body>
+</html>
+<script>
+function calcOrcamento(){
+    var mCanos = Number(metrosCano.value)
+    
+    span1.innerHTML = `O serviço da Nicanor sairá por: R$ ${mCanos * 10 + 50}`
+    span2.innerHTML = `O serviço da Rotirute saira por: R$ ${mCanos * 9.80 + 600}`
+    span3.innerHTML = `a diferença de valores é de ${(mCanos * 9.80 + 600) - (mCanos * 10 + 50)}`
+}
+</script>

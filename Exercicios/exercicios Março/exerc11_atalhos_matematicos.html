@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11 atalhos Matematicos</title>
+</head>
+<body style="background-color: rgb(65, 65, 65); color: orangered;">
+    
+    Valor a ser Depositado: <input id="valor_depositado">  <span id="span_cofrinho"></span><br><br>
+    <button onclick="depositar()">Depositar</button> <button onclick="tirar()">Tirar toda a grana!</button>
+</body>
+</html>
+<script>
+    var deposito = 0;
+function depositar(){
+    deposito += Number(valor_depositado.value);
+    span_cofrinho.innerHTML = `${deposito}`;
+}
+function tirar(){
+    deposito = 0;
+    span_cofrinho.innerHTML = `${deposito}`
+}
+</script>
+<!--
+ 11. Crie um programa em HTML/JS que simule um cofrinho da seguinte forma:
+a) Tenha, logo de cara, a frase "Valor guardado no cofrinho: R$0.00";
+b) Solicite o valor a se depositado;
+c) Ao clicar num botão "Depositar":
+c.1) O valor informado em b) é adicionado ao valor exibido na frase descrita em a);
+d) Ao clicar num botão "Tirar toda a grana": 
+d.1) O valor exibido em a) volta a 0.00.
+-->

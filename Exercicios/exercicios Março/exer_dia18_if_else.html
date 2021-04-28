@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1 if, else</title>
+</head>
+<body style="background-color:black; color: blanchedalmond;">
+    Digite seu nome: <input id="in_nome"><br><br>
+    Digite sua idade: <input id="in_idade"><br><br>
+    <button onclick="avaliar()">Avaliar aluno!</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function avaliar(){
+    var nome = in_nome.value;
+    var idade = Number(in_idade.value);
+    var porcentagem = (idade / 18) * 100;
+    if(idade >= 18){
+        span1.innerHTML = `${nome}, vamos tirar a CNH?`;
+    }else{
+        span1.innerHTML = `${nome}, você possui ${porcentagem.toFixed(0)}% da idade necessaria para tirar a CNH! vá jogar video game!`;
+    }
+}
+</script>
+<!--
+    1. Crie um programa em HTML/JS que auxilie uma Autoescola a identificar possíveis novos alunos:
+a) Solicite o nome e a idade de uma pessoa;
+b) Ao clicar no botão "Avaliar aluno", se a pessoa tiver 18 anos ou mais emita a mensagem "FULANO vamos tirar a CNH?"; Caso contrário emita a mensagem "FULANO, você possui X% da idade necessária para tirar a CNH, vá jogar Playstation!";
+Obs: X deve ser comparado á 18.
+-->

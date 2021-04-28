@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votos</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        Votos Zé Ruela: <input id="votosZr">
+        <br>
+        Votos Maria do Bigode: <input id="votosMb">
+        <br>
+        Votos brancos: <input id="votosB">
+        <br>
+        Votos Nulos: <input id="votosN">
+     <br>
+       <!--<button onclick="totalDeVotos()">Resultado da Eleição</button>--> 
+        <br>
+        <button onclick="final()">Ver os resultados!</button>
+        <br>
+        <br>
+        <span id="totalVotos"></span>
+        <br>
+        <span id="resultado"></span>
+        <br>
+        <span id="resultado1"></span>
+        <br>
+        <span id="resultado2"></span>
+    </div>
+</body>
+</html>
+<script>
+function final(){
+    var vzr = Number(votosZr.value)
+    var vmb = Number(votosMb.value)
+    var vb = Number(votosB.value)
+    var vn = Number(votosN.value)
+    var total = Number(vzr + vmb + vb + vn)
+    totalVotos.innerHTML = (`O total de votos foi: ${vzr + vmb + vn + vb}`)
+    resultado.innerHTML = (`Os votos do Zé Ruela correspondem a: ${vzr / total * 100}%`) 
+    resultado1.innerHTML = (`Os votos da Maria do Bigode correspondem a: ${vmb / total * 100}%`) 
+    resultado2.innerHTML = (`Os votos Invalidos correspondem a: ${(vn + vb) / total * 100}% `) }
+</script>

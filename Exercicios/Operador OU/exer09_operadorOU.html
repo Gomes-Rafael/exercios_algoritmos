@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    digite a nota da avaliação: <input id="in_aval"><br>
+    <button onclick="avaliar()">Avaliar</button><br><br><br><br>
+    <div id="span1"></div>
+</body>
+
+</html>
+<script>
+    function avaliar() {
+        var nota = Number(in_aval.value)
+        if (nota < 0 || nota > 5) {
+            alert("nota invalida, digite uma nota de 0 a 5")
+        } else {
+            if (nota < 0.5) {
+                span1.innerHTML = `<img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;"><img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;"><img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">`
+            } if (nota >= 0.5 && nota < 1) {
+                span1.innerHTML = `<img style="width: 30px; height:45px; float: left;" src="./star_metade.png"><img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;"><img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">`
+            } if (nota >= 1 && nota < 2) {
+                span1.innerHTML = `<img style="width: 45px; height:45px; float: left;" src="./star.png"><img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;"><img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">`
+            } if (nota >= 2 && nota < 3) {
+                span1.innerHTML = `<img style="width: 45px; height:45px; float: left;" src="./star.png"><img style="width: 45px; height:45px; float: left;" src="./star.png">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;"><img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">`
+            } if (nota >= 3 && nota < 4) {
+                span1.innerHTML = `<img style="width: 45px; height:45px; float: left;" src="./star.png"><img style="width: 45px; height:45px; float: left;" src="./star.png">
+                <img style="width: 45px; height:45px; float: left;" src="./star.png"><img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">`
+            }if (nota >= 4 && nota < 5) {
+                span1.innerHTML = `<img style="width: 45px; height:45px; float: left;" src="./star.png"><img style="width: 45px; height:45px; float: left;" src="./star.png">
+                <img style="width: 45px; height:45px; float: left;" src="./star.png"><img style="width: 45px; height:45px; float: left;" src="./star.png">
+                <img src="./star_cinza.png" style=" float: left; width:45px; height:45px; border-left:35px;">`
+            }else{
+                span1.innerHTML = `<img style="width: 45px; height:45px; float: left;" src="./star.png"><img style="width: 45px; height:45px; float: left;" src="./star.png">
+                <img style="width: 45px; height:45px; float: left;" src="./star.png"><img style="width: 45px; height:45px; float: left;" src="./star.png">
+                <img style="width: 45px; height:45px; float: left;" src="./star.png">`
+            }
+        }
+    }
+</script>
+<!--
+    9 (desafio). Solicite a nota da avaliação de um atendente e dê um feedback bem lúdico conforme segue.
+a) Solicite a nota da avaliação
+b) Ao clicar em "Avaliar", verifique se a avaliação está entre 0 e 5. Caso não estiver, exiba um alert "Nota inválida. Digite de 0 a 5", caso contrário, siga para o item c)
+c) Exiba uma certa quantidade de "estrelinhas amarelas" conforme a nota dada:
+    5 estrelas cinzas, lado a lado, caso a nota for menor que 0.5
+    "meia" estrela amarela, meia estrela cinza e 4 estrelas cinzas, lado a lado, caso a nota for entre 0.5 e menor que 1
+    uma estrela amarela, e 4 estrelas cinzas, lado a lado, caso a nota for entre 1 e menor que 1.5
+    E assim por diante, até a última possibilidade que é...
+    5 estrelas amarelas, lado a lado, caso a nota for exatamente 5
+-->

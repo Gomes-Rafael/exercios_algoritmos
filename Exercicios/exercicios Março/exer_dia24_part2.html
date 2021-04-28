@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(65, 65, 65); color: darkorange;">
+    Digite o raio da circunferencia: <input id="in_raio"><br><br>
+    <button onclick="calcular()">Calcular area!</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function calcular(){
+    var raio = in_raio.value;
+    var circunferencia = 2 * 3.14 * raio;
+    span1.innerHTML = `${circunferencia}`;
+}
+</script>
+<!--
+    2. Crie um programa em HTML/JS o qual:
+a) Solicite o raio de uma circunferência;
+
+b) Ao clicar num botão "Calcular Área":
+
+b.1) Calcule e exiba a área da circunferência na tela, abaixo do botão (considere o PI como sendo 3,14).
+-->

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select_filmes">
+        <option value="capi">Capitão America</option>
+        <option value="aquele">Aquele lá do vilão roxo</option>
+        <option value="ultimato">Ultimato</option>
+    </select><br>
+    <button onclick="nota()">Verificar Nota!</button>
+</body>
+</html>
+<script>
+    function nota(){
+        if(select_filmes.value=="capi"){
+            alert("O filme Capitão America tem nota 8")
+        }if(select_filmes.value=="aquele"){
+            alert("O filme do vilão Roxinho tem nota 7")
+        }else{
+            alert("O filme Ultimato tem nota 6")
+        }
+    }
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luzdia</title>
+</head>
+<body>
+    Quantidade de lampadas a serem compradas: <input id="qntdLampadas"><br><br>
+    Valor médio conta de luz: <input id="medioLuz"><br><br>
+    <button onclick="calcularEconomia()">Calcular Economia</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+    function calcularEconomia(){
+        var lampadasQntd = Number(qntdLampadas.value)
+        var luzMedia = Number(medioLuz.value)
+
+        span1.innerHTML = `Seu investimento em lampadas será de: R$ ${lampadasQntd * 20}<br>
+    A sua economia na conta de luz será de R$ ${luzMedia * 0.10}<br>
+    Portanto, em ${lampadasQntd / luzMedia} meses seu investimento será retornado`
+    }
+</script>

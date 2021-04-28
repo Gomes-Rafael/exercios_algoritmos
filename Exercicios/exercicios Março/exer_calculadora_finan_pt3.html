@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.767); color: blanchedalmond;">
+    Digite os m2 a serem comprados: <input id="in_m2"><br><br>
+    <button onclick="calcOrcamento()">Calcular o Orçamento!</button><br><br>
+<span id="span1"></span>
+</body>
+</html>
+<script>
+function calcOrcamento(){
+    var metrosQuad = Number(in_m2.value);
+    span1.innerHTML = `Para ${metrosQuad} metros quadrados, nosso orçamento é:<br>
+grama esmeralda = R$ ${metrosQuad * 9.70},00 com frete de: R$ 150,00 e o valor total de: R$ ${(metrosQuad * 9.70) + 150} <br><br>
+
+grama batatais = R$ ${metrosQuad * 8.70},00 com frete de: R$ 200,00 e o valor total de: R$ ${(metrosQuad * 8.70) + 200}<br><br>
+
+grama São Carlos = R$ ${metrosQuad * 10.70},00 com frete de: R$ 100,00 e o valor total de: R$ ${(metrosQuad * 10.70) + 100}<br><br>`
+}
+</script>

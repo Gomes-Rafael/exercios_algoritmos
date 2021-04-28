@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="color: orangered; background-color: #1c1e1f;">
+    Digite sua idade: <input id="idade_in"><br> Digite seu peso: <input id="peso_in"><br>
+    <button onclick="calcular()">Posso brincar?</button><br><br>
+    <span id="span1"></span>
+</body>
+
+</html>
+<script>
+    function calcular() {
+        var peso = Number(peso_in.value)
+        var idade = Number(idade_in.value)
+        if (peso < 100 && idade >= 15) {
+            span1.innerHTML = `<span style="color: green; font-size: 20px">Legal! Você pode brincar!</span>`
+        } else {
+            span1.innerHTML = `<span style="color:red; font-size: 20px;">É uma pena, você não vai poder brincar...</span>`
+        }
+    }
+</script>
+
+<!--
+    3. Crie um programa em HTML/JS o qual:
+a) Solicita a idade do usuário
+b) Solicita o peso do usuário
+c) Considerando que o sistema é para avaliar o uso de um brinquedo, existe um peso máximo permitido e uma idade mínima (por questões de segurança). Assim, ao clicar em "Pode brincar?", exiba uma das seguintes frases na tela:
+
+    Você poderá brincar :)  -> Caso a idade for maior que 15 e o peso for até 100kg
+    Você não poderá brincar :(  -> Caso a idade for até 15 e o peso for mais de 100kg
+    
+
+4. Faça uma versão melhorada do programa anterior na qual a frase dizendo que pode brincar aparece na cor azul e a que não pode na cor vermelha
+-->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body style="color: coral; background-color: rgb(65, 65, 65);">
+    Digite um numero qualquer: <input id="in_num"><br><br>
+    <button onclick="exibir()">Exibir sua raiz quadrada!</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function exibir(){
+    var num = in_num.value
+    var calculo = num ** (1/2);
+    span1.innerHTML = `${calculo}`
+}
+</script>
+<!--
+    3. Crie um programa em HTML/JS o qual:
+
+a) Solicite um número qualquer;
+
+b) Ao clicar no botão "Exibir sua raiz quadrada": 
+
+b.1) Exiba abaixo do botão a raiz quadrada do número;
+
+c) Ao clicar no botão "Exibir sua raiz cúbica":
+
+c.1) Exiba abaixo do botão a raiz cúbica do número;
+-->

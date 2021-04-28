@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaquinha Facil!</title>
+</head>
+<body>
+    Digite o sabor da pizza: <input type="text" id="sabor"><br>
+    Qual o valor dessa pizza? <input type="text" id="preco"><br>
+    Digite quantos amigos vão comer essa pizza: <input type="text" id="inputQntdAmigos"><br><br>
+    <button id="btnValor" onclick="valor()">Ver valor por pessoa</button><br>
+    <span id="resultado"></span>
+</body>
+</html>
+<script>
+    function valor(){
+        var qntdAmigos = Number(inputQntdAmigos.value)
+        var valor = Number(preco.value)
+resultado.innerHTML = `Cada amigo vai colaborar com: ${(valor * 1.10) / qntdAmigos} reais.`
+    }
+</script>

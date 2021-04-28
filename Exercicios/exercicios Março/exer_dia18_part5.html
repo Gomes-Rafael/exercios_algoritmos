@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5, if e Else</title>
+</head>
+<body>
+    Digite sua freguencia: <input id="in_frequencia"><br><br>
+    <button onclick="analisar()">Analisar sua Frequencia!</button><br><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+    
+function analisar(){
+    var frequencia = Number(in_frequencia.value);
+if(frequencia <= 50){
+span1.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiHmuulCD_j10GiFLKq6xyV_gtbP0-kRu1gg&usqp=CAU">`;
+}else{
+    span1.innerHTML = `<img src="https://us.123rf.com/450wm/yupiramos/yupiramos1905/yupiramos190543362/122983202-boy-textbooks-and-apple-world-book-day-vector-illustration.jpg?ver=6">`;
+}
+}
+</script>
+<!--
+    5. Crie um programa em HTML/JS o qual:
+a) Solicita a frequencia do aluno;
+b) Ao clicar em "Analisar frequência", deve aparecer, abaixo dele:
+    A imagem de um turista, caso a frequência for menor que 50 OU
+    A imagem de um aluno estudioso, caso a frequência for a partir de 50.
+-->

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipes</title>
+</head>
+<body>
+    <div>
+        <div id="equipe1" style="width: 50%; float: left;">
+            <img src="https://www.revistarppsdobrasil.com.br/wp-content/uploads/2017/05/Equipe-Banco-Safra-Marcelo-Marcia-Edimilson-e-Cosmo-ao-lado-do-Presidente-da-APEPREM-Luiz-Brenha-2.jpg" style="width: 500px; height: 320px;">
+            <br>
+            Nome da equipe: <input type="text" id="nomeEquipe"><br>
+            Nome do projeto: <input type="text" id="nomeProjeto"><br>
+            Duração do projeto em dias: <input type="text" id="duracaoDias"><br>
+            Custo total do projeto: <input type="text" id="custoTotal"><br>
+            Quantidade de horas do projeto: <input type="text" id="qntdHoras"><br><br>
+        </div>
+        <div id="equipe2" style="width: 50%; float: left;">
+            <img src="https://www.mogidascruzesbasquete.com.br/images/Campanha-do-Agasalho-Tivit-Foto-Antonio-Penedo.jpg"><br>
+            Nome da equipe: <input type="text" id="nomeEquipe2"><br>
+            Nome do projeto: <input type="text" id="nomeProjeto2"><br>
+            Duração do projeto em dias: <input type="text" id="duracaoDias2"><br>
+            Custo total do projeto: <input type="text" id="custoTotal2"><br>
+            Quantidade de horas do projeto: <input type="text" id="qntdHoras2"><br><br>
+        </div><br>
+        <div style="position: absolute; top: 450px; left: 40%;"><button onclick="resultadoEQ1(); resultadoEQ2()">Analisar os Projetos</button></div><br>
+    </div>
+    <div style="position: absolute; top:480px; left: 25%;">Referência de mercado do custo por hora para projeto de TI <input id="referenciaMercado"><br><br></div>
+    
+        <div><span id="spanEQ1" style="float:left;"></span><br></div>
+        <span id="spanEQ2"></span>
+</body>
+</html>
+<script>
+function resultadoEQ1(){
+var nomeEQ = nomeEquipe.value
+var nomePJ = nomeProjeto.value
+var duracao = Number(duracaoDias.value)
+var custo = Number(custoTotal.value)
+var horas = Number(qntdHoras.value)
+var nomeEQ2 = nomeEquipe2.value
+var nomePJ2 = nomeProjeto2.value
+var duracao2 = Number(duracaoDias2.value)
+var custo2 = Number(custoTotal2.value)
+var horas2 = Number(qntdHoras2.value)
+var referencia = Number(referenciaMercado.value)
+var f = Number(custo / horas)
+var p = Number(custo2 / horas2)
+var barra1 = Number(f * 100 / (f + p))
+var barra2 = Number(p * 100 / (f + p))
+spanEQ1.innerHTML = `<br><br><br><br><br><b>Análise de Tempo<b>
+<br>
+o projeto ${nomePJ} foi desenvolvido em ${horas} horas num período de ${duracao} dias, portanto a equipe ${nomeEQ} trabalhou em média ${horas / duracao} horas por dia nesse projeto.
+<br>
+o projeto ${nomePJ2} foi desenvolvido em ${horas2} horas num período de ${duracao2} dias, portanto a equipe ${nomeEQ2} trabalhou em média ${horas2 / duracao2} horas por dia nesse projeto.
+<br><br>
+Análise de Custos
+<br>
+A equipe ${nomeEQ} desenvolveu o projeto ${nomePJ} em ${horas} horas a um custo de R$ ${custo}, portanto o custo por hora desse projeto é R$ ${custo / horas}.
+<br>
+A equipe ${nomeEQ2} desenvolveu o projeto ${nomePJ2} em ${horas2} horas a um custo de R$ ${custo2}, portanto o custo por hora desse projeto é R$ ${custo2 / horas2}.
+<br><br>
+Observe que o custo por hora do projeto ${nomePJ} é ${f / p * 100}% do custo por hora do projeto ${nomePJ2}.
+<br><div id="barra1" style="background-color:red; width:${barra1 * 10}px; height:30px;"></div>
+<div id="barra2" style="background-color:blue; width:${barra2 * 10}px; height:30px;"></div>`
+}
+function resultadoEQ2(){
+    var nomeEQ = nomeEquipe.value
+var nomePJ = nomeProjeto.value
+var duracao = Number(duracaoDias.value)
+var custo = Number(custoTotal.value)
+var horas = Number(qntdHoras.value)
+var nomeEQ2 = nomeEquipe2.value
+var nomePJ2 = nomeProjeto2.value
+var duracao2 = Number(duracaoDias2.value)
+var custo2 = Number(custoTotal2.value)
+var horas2 = Number(qntdHoras2.value)
+var referencia = Number(referenciaMercado.value)
+var f = Number(custo / horas)
+var p = Number(custo2 / horas2)
+var barra1 = Number(f * 100 / (f + p))
+var barra2 = Number(p * 100 / (f + p))
+    spanEQ2.innerHTML = `Análise de Referência
+<br><br>
+o projeto ${nomePJ} com custo por hora de R$ ${custo / horas} é ${(custo / horas) / referencia}% em relação a referência de mercado ${referencia}.
+<br>
+o projeto ${nomePJ2} com custo por hora de R$ ${custo2 / horas2} é ${(custo2 / horas2) / referencia}% em relação a referência de mercado ${referencia}`
+}
+</script>

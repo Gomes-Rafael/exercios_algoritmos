@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="color: orangered; background-color: rgb(65,65,65);">
+    <h1>Verifique se você é vegano ou não</h1>
+    <select id="select_cafe">
+    <option value="carnivoro">Ovos</option>
+    <option value="vegano">Leite de Arroz</option>
+    <option value="carnivoro">Bacon</option>
+</select><br>
+    <select id="select_almoco">
+    <option value="carnivoro">Bife</option>
+    <option value="vegano">Hamburguer de soja</option>
+    <option value="carnivoro">Frango grelhado</option>
+</select><br>
+    <select id="select_janta">
+    <option value="vegano">Picanha de soja</option>
+    <option value="carnivoro">Cupim</option>
+    <option value="carnivoro">Coração</option>
+</select><br><br>
+    <button onclick="veja()">Veja se você é Vegano</button>
+</body>
+
+</html>
+<script>
+    function veja() {
+        var cafe = select_cafe.value
+        var almoco = select_almoco.value
+        var janta = select_janta.value
+        if (cafe == "vegano" && almoco == "vegano" && janta == "vegano") {
+            alert("Parabens, você é vegano!")
+        } else {
+            alert("Você não é um vegano!")
+        }
+    }
+</script>
+<!--
+    7. Crie um programa em HTML/JS que verifique se o usuário é vegano ou não.
+a) Numa combo pergunte o que ele come no café da manhã, tendo as opções
+    ovos
+    leite de arroz
+    bacon
+b) Numa outra combo pergunte o que ele come no almoço, tendo as opções
+    bife
+    hamburger de soja
+    frango grelhado
+c) Numa outra combo pergunte o que ele come na janta, tendo as opções
+    picanha de soja
+    cupim
+    coração
+-->

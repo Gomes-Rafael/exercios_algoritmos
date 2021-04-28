@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(65,65,65); color: orangered;">
+    Digite seu nome: <input id="in_nome"><br>
+    <select id="select_bebida">
+        <option value="0">Nenhuma</option>
+        <option value="2">Água</option>
+        <option value="5">Refrigerante</option>
+        <option value="7">Cerveja</option>
+    </select><br>
+    <select id="select_comida">
+        <option value="12">Salada</option>
+        <option value="18">Feijoada</option>
+        <option value="18">Bife a Cavalo</option>
+        <option value="20">Peixe Frito</option>
+    </select><br>
+    <button onclick="calcular()">Calcular Total a pagar</button><br><br>
+    <span id="span1"></span>
+</body>
+
+</html>
+<script>
+    /*  var nome = in_nome.value
+                        var comida = Number(in_comida.value)
+                        var bebida = Number(in_bebida.value) */
+    function calcular() {
+        var nome = in_nome.value;
+        var total = Number(select_bebida.value) + Number(select_comida.value);
+        alert(`Olá, ${nome}. Seu almoço vai custar um total de R$${total}`);
+    }
+</script>
+<!--
+    1. Crie um programa em HTML/JS o qual:
+a) Solicite a "Bebida" que o usuário vai consumir, dentre as seguintes opções:
+   Nenhuma, Água, Refrigerante, Cerveja
+   Defina o preço que quiser para cada um desses itens
+   
+b) Solicite a "Refeição" que o usuário vai consumir, dentre as seguintes opções:
+   Salada, Feijoada, Bife a Cavalo, Peixe Frito
+   Defina o preço que quiser para cada um desses itens
+   
+c) Solicite o nome do usuário   
+
+d) Ao clicar num botão "Calcular total a pagar", exiba na própria página uma frase como esta:
+   
+   Olá, NOME. Seu almoço vai custar um total de R$TOTAL
+   
+Onde NOME é o valor informado em c) e TOTAL é a soma do valor da bebida do item a) com o valor da refeição do item b)
+-->

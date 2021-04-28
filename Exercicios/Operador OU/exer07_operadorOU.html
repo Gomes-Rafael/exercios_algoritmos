@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="sel_marca">
+        <option value="samsung">Samsung</option>
+        <option value="mondial">Mondial</option>
+        <option value="LG">LG</option>
+        <option value="britania">Britania</option>
+    </select><br>
+    Digite o preço da TV: <input id="in_preco"><br><br>
+    <button onclick="analisar()">Analisar compra</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function analisar(){
+var marca = sel_marca.value
+var preco = in_preco.value
+if(preco < 800 || preco > 2000){
+    if(preco < 800){
+        span1.innerHTML = "TV fora da faixa de preço! preço baixo demais!"
+    }else{
+        span1.innerHTML = "TV fora da faixa de preço! preco alto demais! cai fora rsrsrs"
+    }
+}else{
+    if(marca == 'britania' || marca == 'mondial'){
+span1.innerHTML = "Preço bom, mas a marca não é confiavel!"
+}else{
+    span1.innerHTML = "preço bom e marca confiavel, pode comprar!"
+}
+}
+}
+</script>
+<!--
+    7. George está pesquisando por uma nova TV de 40" porque suspeita que o governador de seu estado irá prorrogar a quarentena por mais 1 mês e sua TV atual é de 22" apenas. Porém, ele é desconfiado com preços muito baixos e, claro, possiu um teto, um limite máximo que está disposto a pagar. Assim, crie para ele um programa em HTML/JS o qual:
+a) Solicite a marca da TV numa combo (com as opções "Samsung", "LG", "Mondial" e "Britânia")
+b) Solicite o preço da TV
+c) Ao clicar em "Analisar compra", podem aparecer as seguintes mensagens na tela:
+   c.1) "TV fora da faixa de preço", caso a TV custar menos que 800 e mais que 2000
+   c.2) "Na faixa de preço, porém marca não confiável", caso esteja na faixa entre 800 e 2000, porém for da "Mondial" ou "Britânia"
+   c.3) Caso tenha exibido a mensagem de c.1), exiba também essa outra frase, caso custar menos de 800: "Preço baixo demais!". Ou, caso custar mais de 2000, exiba esta: "TV cara demais, infelizmente"
+   c.4) Caso a TV esteja na faixa de preço e for da "LG" ou "Samsung", exiba "Essa TV pode entrar na sua lista!"
+
+-->

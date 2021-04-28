@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(65, 65, 65); color: darkorange;">
+  Digite uma frase:  <input id="in_frase"><br><br>
+  <button onclick="registrarFrase()">Registrar Frase!</button><br>
+  <button onclick="verFrase()">Ver Frase!</button>
+</body>
+</html>
+<script>
+    var fraseVar = '';
+function registrarFrase(){
+    fraseVar = in_frase.value;
+}
+function verFrase(){
+alert (`${fraseVar}`)
+}
+</script>
+
+<!--
+Faça um programa em HTML/JS o qual:
+
+a) O usuário digita uma frase;
+b) Ao clicar em "Registrar frase":
+    b.1) Armazena o valor em algum lugar;
+c) Ao clicar em "Ver frase":
+    c.1) A página emite um alert com a frase previamente digitada em a).
+
+Obs: Devem utilizar ao menos 2 funções;
+Obs²: A função que exibe a frase previamente digitada não deve ser a mesma que "salva" a frase;
+Obs³: Na segunda função (a que mostrará a frase) não deve haver id_do_elemento.value;
+
+-->

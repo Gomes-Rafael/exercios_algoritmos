@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(65, 65, 65); color: orangered;">
+    
+    Valor a ser Depositado: <input id="valor_depositado">  <span id="span_cofrinho"></span><br><br>
+    <button onclick="depositar()">Depositar</button> <button onclick="tirar()">Tirar toda a grana!</button><br>
+    <span id="span_depositos"></span> <span id="span_retiradas"></span>
+</body>
+</html>
+<script>
+    var deposito = 0;
+    var retiradas = 0;
+    var qntdDepositos = 0;
+function depositar(){
+    deposito += Number(valor_depositado.value);
+    qntdDepositos ++;
+    span_cofrinho.innerHTML = `${deposito}`;
+    span_depositos.innerHTML = `Quantidade de depósitos feitos: ${qntdDepositos}`
+}
+function tirar(){
+    deposito = 0;
+    retiradas ++;
+    span_cofrinho.innerHTML = `${deposito}`
+    span_retiradas.innerHTML = `Quantidade de retiradas feitas: ${retiradas}`
+}
+</script>
+<!--
+    12. Melhore o programa da questão anterior de tal forma que:
+a) Abaixo da frase do valor guardado tenha as seguintes frases:
+    "Quantidade de depósitos feitos: 0";
+    "Quantidade de retiradas feitas: 0";
+b) Sempre que for clicado no botão "Depositar", o valor de "depósitos feitos" aumenta em 1;
+c) Sempre que for clicado no botão "Tirar toda a grana", o valor de "retiradas feitas" aumenta em 1;
+-->

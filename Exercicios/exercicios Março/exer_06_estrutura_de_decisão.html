@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 06</title>
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.767);">
+    Digite o valor da pizza: <input id="pizzaValor"><br><br>
+    Digite a quantidade de amigos: <input id="amigosQntd"><br><br>
+    <button onclick="rolaPizza()">Rola a pizza?</button><br><br>
+    <span id="span1"></span><br>
+    <span id="span2"></span>
+</body>
+</html>
+<script>
+function rolaPizza(){
+    var valorPizza = Number(pizzaValor.value);
+    var qntdAmigos = Number(amigosQntd.value);
+    var dividido = valorPizza / qntdAmigos;
+    span2.innerHTML = "";
+span1.innerHTML = `Cada amigo vai pagar R$${dividido} pela pizza`
+if(dividido > 20){
+    span2.innerHTML = "Deu ruim, a Pizza vai sair cara!";
+}
+}
+</script>

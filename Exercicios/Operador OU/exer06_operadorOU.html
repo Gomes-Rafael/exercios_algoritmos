@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite a temperatura ambiente: <input id="in_temp"><br>
+    Digite a umidade do ar: <input id="in_umidade"><br><br>
+    <button onclick="avaliar()">Avaliar clima</button>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function avaliar(){
+    var temp = Number(in_temp.value)
+    var umidade = Number(in_umidade.value)
+    if(umidade > 100 || umidade < 0){
+span1.innerHTML = `Umidade invalida!`
+    }else{
+        if(temp < 25 && temp > 20){
+span1.innerHTML = "Clima agradavel!"
+        }else{
+            span1.innerHTML = "Clima desagradavel!!!"
+        }
+    }
+}
+</script>
+<!--
+    6. Crie um programa em HTML/JS que ajude a avaliar o clima de um ambiente:
+a) Solicite a temperatura
+b) Solicite a umidade do ar
+c) Ao clicar em 'Avaliar clima':
+   c.1) Caso a umidade for inválida, ou seja, menor que 0 e maior que 100, exiba um alert "Valor de umidade inválido" e limpe qualquer outro texto que exista na tela (item c.2)
+   c.2) Caso a umidade for válida, exiba uma dessas frases na própria página, abaixo do botão:
+          "Clima agradável", caso a temperatura for entre 22 e 23 e a umidade for menor que 60.
+          "Clima desconfortável", em caso contrário. 
+-->

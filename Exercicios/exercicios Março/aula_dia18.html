@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toFixed</title>
+</head>
+<body style="background-color:#343a40; color: aliceblue;">
+    Primeiro numero: <input id="in_primeiro_numero"><br><br><br>
+    Segundo numero: <input id="in_segundo_numero"><br><br><br>
+    <button onclick="divisao()">Dividir</button><br><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+    function divisao(){
+        // toFixed
+        var num1 = Number(in_primeiro_numero.value);
+        var num2 = Number(in_segundo_numero.value);
+        var resultado = num1 / num2;
+span1.innerHTML = `${resultado.toFixed(2)}`
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Digite o valor da passagem: <input type="text" id="valorPass"><br>
+   Digite a quantidade de viagens feitas no més: <input type="text" id="qntdViagens"><br>
+   Agora digite a distancia do seu trabalho até a sua casa: <input type="text" id="distanciaKM"><br>
+<button id="calcularVT" onclick="resultado()">Calcular VT</button><br>
+<span id="resultadoSpan"></span>
+</body>
+</html>
+<script>
+    function resultado(){
+        var valorInicial = Number(valorPass.value)
+        var viagens = Number(qntdViagens.value)
+        var distancia = Number(distanciaKM.value)
+        var uber = Number(viagens * 0.10)
+        var calculoUber = Number(uber * (distancia * 0.75))
+resultadoSpan.innerHTML = `Voce vai gastar ${[valorInicial *  (viagens * 0.10)] + calculoUber} por mes com transporte.`
+    }
+</script>

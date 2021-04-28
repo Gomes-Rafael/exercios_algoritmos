@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body> Informe o numero a ser multiplicado:
+   <br> <input id="inputTabuada">
+<br>
+<button id="ver Tabuada!" onclick="resultado()">Exibir Resutado!</button>
+<br>
+<span id="resultadoSpan"></span><br>
+<span id="resultadoSpan1"></span><br>
+<span id="resultadoSpan2"></span><br>
+<span id="resultadoSpan3"></span><br>
+<span id="resultadoSpan4"></span><br>
+<span id="resultadoSpan5"></span><br>
+<span id="resultadoSpan6"></span><br>
+<span id="resultadoSpan7"></span><br>
+<span id="resultadoSpan8"></span><br>
+<span id="resultadoSpan9"></span><br>
+<span id="resultadoSpan10"></span><br>
+</body>
+</html>
+<script>
+    function resultado(){
+    var nI = inputTabuada.value
+resultadoSpan.innerHTML = `${nI * 1}`
+resultadoSpan1.innerHTML = `${nI * 2}`
+resultadoSpan2.innerHTML = `${nI * 3}`
+resultadoSpan3.innerHTML = `${nI * 4}`
+resultadoSpan4.innerHTML = `${nI * 5}`
+resultadoSpan5.innerHTML = `${nI * 6}`
+resultadoSpan6.innerHTML = `${nI * 7}`
+resultadoSpan7.innerHTML = `${nI * 8}`
+resultadoSpan8.innerHTML = `${nI * 9}`
+resultadoSpan9.innerHTML = `${nI * 10}`
+}
+</script>

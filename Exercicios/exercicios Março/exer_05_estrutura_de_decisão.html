@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.801);">
+    Digite o valor de uma nota: <input id="nota1"><br>
+    Digite o valor de outra nota: <input id="nota2"><br>
+    Digite o valor de mais uma nota: <input id="nota3"><br><br>
+    <button onclick="anaDesempenho()">Analisar desempenho</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function anaDesempenho(){
+    var nota01 = Number(nota1.value)
+    var nota02 = Number(nota2.value)
+    var nota03 = Number(nota3.value)
+    var media = (nota01 + nota02 + nota03) / 3;
+    if(media > 9.4){
+        span1.innerHTML = "você é uma aluna fora de serie!"
+    }
+}
+</script>

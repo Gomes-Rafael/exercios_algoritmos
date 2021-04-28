@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div>
+      <button onclick="meuSegundoPrograma()">clique em mim</button>
+  </div>  
+</body>
+</html>
+<script>
+    /* padroes de nomenclatura:
+    _ ==> snake_case
+    aA ==> camelCase
+    */
+    function meu_primeiro_programa(){
+        alert('olá mundo');
+        document.title = 'é nois no JS';
+    }
+    function meuSegundoPrograma(){
+        alert('vou chamar a função meu_primeiro_programa')
+        meu_primeiro_programa();
+    }
+</script>

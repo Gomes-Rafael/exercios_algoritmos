@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Tipo do Arroz: <select id="sel_arroz">
+        <option value="integral">Integral</option>
+        <option value="branco">Branco</option>
+    </select><br>
+    Digite o tempo de cozimento: <input id="in_tempo"><br>
+    Digite em gramas a quantidade de sal: <input id="in_sal"><br>
+    <button onclick="avaliar()">Avaliar Arroz</button><br><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function avaliar(){
+    var tipo = sel_arroz.value
+    var tempo = in_tempo.value
+    var sal = in_sal.value
+    if(tipo == "integral"){
+if(tempo == 20 || sal == "15g"){
+    span1.innerHTML = "Parabens seu Arroz está perfeito!"
+}else{
+    span1.innerHTML = "É uma pena seu Arroz não está perfeito..."
+}
+    }else{
+        if(tempo == 10 || sal == "10g"){
+span1.innerHTML = "Parabens seu Arroz está perfeito!"
+        }else{
+            span1.innerHTML = "É uma pena seu Arroz não está perfeito..."
+        }
+    }
+}
+</script>
+<!--
+    5 (desafio). Crie um programa em HTML/JS o qual:
+OBS: Use, necessariamente pelo menos um "ou" (||)
+a) Pergunte numa combo o tipo de arroz usado (integral ou branco)
+b) Pergunte o tempo de cozimento, em minutos
+c) Pergunte a quantidade de sal usada, em gramas
+d) Ao clicar em "Avaliar arroz", exiba, abaixo dele...
+    A frase "Arroz perfeito", caso:
+      Em caso de arroz branco, 10 minutos e até 10g de sal
+      Em caso de arroz integral, 20 minutos e até 15g de sal
+   A frase "Seu arroz não está perfeito", caso nenhum dos critérios anteriores tenha sido alcançado
+e) No caso de arroz perfeito, exiba também a imagem de um belo arroz, branco ou integral, conforme o tipo selecionado. 
+Caso contrário, exiba a cara do Jacquin bravo (aquele famoso meme), independe do tipo de arroz.
+-->

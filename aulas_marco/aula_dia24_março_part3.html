@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(65, 65, 65); color: darkorange;">
+    <button onclick="incrementar()">Incrementar!</button><br><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+    var num = 0;
+function incrementar(){
+    span1.innerHTML = `${++num}`;
+if (num == 13){
+    alert("Acho que o usuario não irá gostar do numero!");
+    span1.innerHTML = "13"
+}
+}
+</script>
+
+<!--
+    1 - Faça um programa em HTML/JS o qual:
+
+a) Tenha um botão "Incrementar":
+    a.1) Toda vez que é pressionado ele aumenta em 1 o valor de uma variável global qualquer e exibe na página esse valor;
+b) Quando o número estiver em 1 antes de 13 (12) exiba "O usuário não gostará do próximo número" e logo em seguida mostre o número 13 (sem clicar no botão novamente);
+-->

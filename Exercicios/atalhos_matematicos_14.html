@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0%;
+            margin: 0%;
+            background-color: black;
+        }
+        #img{
+            position:relative;
+        }
+        .img2{
+            left: 800px;
+            
+        }
+        .img1{
+            top: 20px;
+        }
+        #container{
+            display: none;
+        }
+        #btn_iniciar{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-shadow: 5px 5px black;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border-radius: 10px;
+        background-color: chartreuse;
+        font-size: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        cursor: pointer;
+        
+        }
+    </style>
+</head>
+<body>
+    <button id="btn_iniciar" onclick="iniciar()">Iniciar Jogo</button>
+    <div id="container">
+        <a href=""><img id="img" class="img1" src="https://static.wikia.nocookie.net/heroes-and-villians/images/5/51/Tai_lung_icon.png/revision/latest?cb=20170827174433" alt=""></a>
+        <a href=""><img id="img" class="img2" src="https://lh3.googleusercontent.com/proxy/HyCLeQxLE1uINrtJHI42rX9A_Nq6DGCg9m6wXiMlmqRYXQDiOg5613MIu7t0pPVEgDx6l6E26bN7JeueWpqN7d5pP9VLj2ymS51QTtONgJtne-KR9xkv-TgcootwdbvanwVTkdlQjg" alt=""></a>    
+    </div>
+</body>
+</html>
+<script>
+function iniciar(){
+   
+}
+</script>
+
+<!---
+14 (desafio). Crie um programa em HTML/JS que simule um jogo de luta simples.
+a) Nada deve aparecer na tela a princípio, a não ser um botão "Iniciar Jogo":
+a.1) Ao clicar nele, aparecem os itens a seguir:
+b) Aparecem as fotos de 2 lutadores (como as dos exemplos abaixo). E, abaixo deles, uma "barra de vida", que ocupa 100% da largura da tela;
+c) Abaixo das imagens e barras, deve haver o texto:
+   Golpes sofridos pelo lutador 1: 0
+   Golpes sofridos pelo lutador 2: 0
+
+d) Sempre que for clicada na imagem de um dos lutadores, seu "contador" aumenta em 1 e sua barra reduz em 5% bruto (não relativo). Ex: estava em 90%, vai para 85%. Estava em 75%, vai para 70%;
+-->

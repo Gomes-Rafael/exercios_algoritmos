@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alertaCarnes()">Carnes</button>
+    <button onclick="alertaLegumes()">Legumes</button>
+    <button onclick="alertaFrutas()">Frutas</button>
+    
+</body>
+</html>
+<script>
+function alertaLegumes(){
+    alert("legumes são bons"); 
+    document.title = "Ultimo click, LEGUMES!";
+}
+function alertaCarnes(){
+    alert("Carne já não é tão boa assim!"); 
+    document.title = "Ultimo click, CARNE!";
+}
+function alertaFrutas(){
+    alert("Frutas, em sua maioria são otimas!"); 
+    document.title = "Ultimo click, FRUTAS!";
+}
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequência do Aluno</title>
+</head> 
+<body>
+    Nome do aluno: <input id="input_nome">
+    Total de aulas do curso: <input id="input_total_aulas">
+    Quantidade de faltas do aluno: <input id="input_faltas">
+    <button onclick="calcular()">Calcular Frequência</button>
+    <div id="conteudo"></div>
+    <!--  <div id="barra"></div> -->
+</body>
+</html>
+
+<>
+    function calcular() {
+        var nome = `${input_nome.value}`; 
+        var totalAulas = Number(input_total_aulas.value);
+        var faltas = Number(input_faltas.value);
+        var aulasPresente = totalAulas - faltas;
+        var frequencia = (aulasPresente / totalAulas) * 100;
+
+        conteudo.innerHTML = `<span style = "color: azul;">Olá, ${nome}! Sua frequência foi de ${frequencia}</span><b style = "color: green;">%</b>
+        <br>
+        <div style = "background-color: darkred; height: 20px; width: ${frequencia}vw;"></div>`;
+        /* barra.style.width.height.backgroundColor = `${frequencia}vw`;
+        barra.style.height = `20px`;
+        barra.style.backgroundColor = `red`; */
+    }
+</>

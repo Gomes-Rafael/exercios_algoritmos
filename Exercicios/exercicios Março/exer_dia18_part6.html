@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6, if e Else</title>
+</head>
+<body style="background-color: rgb(61, 61, 61); color: hotpink;">
+    Digite a temperatura ambiente: <input id="in_temp"><br><br>
+    <button onclick="verificar()">Verificar Clima</button>
+<br><br><span id="span1"></span>
+</body>
+</html>
+<script>
+function verificar(){
+    var temp = in_temp.value;
+    if (temp <= 10){
+span1.innerHTML = "A temperatura está adequada para conservar alimentos!<br>"
+span1.innerHTML += `<img src="https://nutry.com.br/wp-content/uploads/2019/05/beneficio-fruta-banana.jpg">`
+    }else{
+span1.innerHTML = "A temperatura está inadequada para conservar alimentos!<br>" 
+span1.innerHTML += `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO5VXDV8XxW93mUqiTYkQlNj3Z2Fe9QYveZQ&usqp=CAU">`
+}
+}
+</script>
+
+
+<!--
+    6. Crie um programa em HTML/JS o qual:
+a) Solicita a temperatura do ambiente;
+b) Ao clicar em "Verificar clima", determine se o clima está:
+    Apropriada p/ conservar alimento - Caso a temperatura for menor que 10;
+    Inapropriada p/ conservar alimento - Caso a temperatura for a partir de 10;
+c) Em caso de temperatura apropriada, exiba a figura de um alimento em bom estado; Caso contrário, exiba a imagem de um alimento estragado.
+-->

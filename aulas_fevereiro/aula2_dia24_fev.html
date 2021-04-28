@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="background-color: rgba(139, 0, 0, 0.521); height: 120px; width: 500px; text-align: center;" >
+        Primeiro numero: <input id ="inputPrimeiroNumero" size="8px">
+        <br>
+        <br>
+        Segundo numero: <input id ="inputSegundoNumero" size="8px">
+        <br>
+        <br>
+        <button onclick="multiplicar()" style="background-color: aquamarine;" id="mul">Multiplicar</button>
+        <button onclick="dividir()" style="background-color: chartreuse;" id='div';>Dividir</button>
+        <button onclick="subtrair()" style="background-color: coral;" id="sub">Subtrair</button>
+        <button onclick="adicao()" style="background-color: darkcyan;" id="adi">Adição</button>
+        <button onclick="potencia()" style="background-color: darkorchid;" id="pot">Potencia</button>
+    </div>
+</body>
+</html>
+<script>
+    function multiplicar(){
+        var primeiroNumero = Number(inputPrimeiroNumero.value)
+        var segundoNumero = Number(inputSegundoNumero.value)
+        alert(`A multiplicação de ${segundoNumero} por ${primeiroNumero}
+é igual a ${primeiroNumero * segundoNumero}`)
+    }
+    function dividir(){
+        var primeiroNumero = Number(inputPrimeiroNumero.value)
+        var segundoNumero = Number(inputSegundoNumero.value)
+        alert(`A divisão de ${primeiroNumero} por ${segundoNumero}
+é igual a ${primeiroNumero / segundoNumero}`)
+    }
+    function subtrair(){
+        var primeiroNumero = Number(inputPrimeiroNumero.value)
+        var segundoNumero = Number(inputSegundoNumero.value)
+        alert(`A subtração de ${segundoNumero} por ${primeiroNumero}
+é igual a ${primeiroNumero - segundoNumero}`)
+    }
+    function adicao(){
+        var primeiroNumero = Number(inputPrimeiroNumero.value)
+        var segundoNumero = Number(inputSegundoNumero.value)
+        alert(`A adição de ${primeiroNumero} por ${segundoNumero}
+é igual a ${primeiroNumero + segundoNumero}`)
+    }
+    function potencia(){
+        var primeiroNumero = Number(inputPrimeiroNumero.value)
+        var segundoNumero = Number(inputSegundoNumero.value)
+        alert(`O resultado da pontenciação é: ${primeiroNumero ** segundoNumero}`)
+    }
+</script>

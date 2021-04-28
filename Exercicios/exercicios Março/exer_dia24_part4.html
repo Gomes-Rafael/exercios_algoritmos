@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body style="background-color: rgb(65, 65, 65); color: coral;">
+    <span id="span1"></span> <br><br>
+    <button onclick="aumentar()">Clica Nimin!</button>
+</body>
+</html>
+<script>
+    var numero = 0;
+function aumentar(){
+    span1.innerHTML = `Você já clicou ${++numero} vezes!`
+}
+</script>
+<!--
+    4 (desafio). Usando apenas o que foi ensinado até agora, crie um programa em HTML/JS o qual:
+
+a) Tenha um texto "Você já clicou 0 vezes";
+
+b) Abaixo do texto, um botão "Clica nimim", que: 
+
+b.1) Sempre que clicar nele o número do texto em a) aumenta em 1 (ex: "Você já clicou 7 vezes" - após 7 cliques).
+-->
