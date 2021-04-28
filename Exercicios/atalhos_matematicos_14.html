@@ -16,7 +16,7 @@
         }
         .img2{
             left: 800px;
-            
+            padding: 20px;
         }
         .img1{
             top: 20px;
@@ -36,21 +36,70 @@
         font-size: 30px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         cursor: pointer;
-        
+        }
+        #vida_panda{
+            position: absolute;
+            width: 500px;
+            height: 30px;
+            background-color: greenyellow;
+            top: 600px;
+            left: 1300px;
+        }
+        #vida_lung{
+            position: absolute;
+            width: 500px;
+            height: 30px;
+            background-color: greenyellow;
+            top: 600px;
+            left: 20px;
+        }
+        #spanGolpesPanda{
+            position: absolute;
+            top: 700px;
+            left: 1430px;
+            color: red;
+        }
+        #spanGolpesLung{
+            position: absolute;
+            top: 700px;
+            left: 95px;
+            color: red;
         }
     </style>
 </head>
 <body>
     <button id="btn_iniciar" onclick="iniciar()">Iniciar Jogo</button>
     <div id="container">
-        <a href=""><img id="img" class="img1" src="https://static.wikia.nocookie.net/heroes-and-villians/images/5/51/Tai_lung_icon.png/revision/latest?cb=20170827174433" alt=""></a>
-        <a href=""><img id="img" class="img2" src="https://lh3.googleusercontent.com/proxy/HyCLeQxLE1uINrtJHI42rX9A_Nq6DGCg9m6wXiMlmqRYXQDiOg5613MIu7t0pPVEgDx6l6E26bN7JeueWpqN7d5pP9VLj2ymS51QTtONgJtne-KR9xkv-TgcootwdbvanwVTkdlQjg" alt=""></a>    
+        <img id="img" onclick="socoNoLung()" class="img1" src="https://static.wikia.nocookie.net/heroes-and-villians/images/5/51/Tai_lung_icon.png/revision/latest?cb=20170827174433">
+        <img id="img" onclick="socoNoPanda()" class="img2" src="https://lh3.googleusercontent.com/proxy/HyCLeQxLE1uINrtJHI42rX9A_Nq6DGCg9m6wXiMlmqRYXQDiOg5613MIu7t0pPVEgDx6l6E26bN7JeueWpqN7d5pP9VLj2ymS51QTtONgJtne-KR9xkv-TgcootwdbvanwVTkdlQjg">
+    <div id="vida_lung"></div>
+    <div id="vida_panda"></div>
+    <span id="spanGolpesLung">Golpes sofridos pelo Lung: 0</span>
+    <span id='spanGolpesPanda'>Golpes sofridos pelo Panda: 0</span>
     </div>
 </body>
 </html>
 <script>
+    
 function iniciar(){
-   
+   container.style = `display: block;`
+   btn_iniciar.style = `display: none;`
+}
+var vidaLung = 500
+var vidaPanda = 500
+var golpesLung = 0
+var golpesPanda = 0
+function socoNoPanda(){
+    vidaPanda = vidaPanda - 50
+    vida_panda.style.width = `${vidaPanda}px`
+    golpesPanda = golpesPanda + 1
+    spanGolpesPanda.innerHTML =`Golpes sofridos pelo Panda: ${golpesPanda}`
+}
+function socoNoLung(){
+    vidaLung = vidaLung - 50
+    vida_lung.style.width = `${vidaLung}px`
+    golpesLung = golpesLung + 1
+    spanGolpesLung.innerHTML = `Golpes sofridos pelo Lung: ${golpesLung}`
 }
 </script>
 
