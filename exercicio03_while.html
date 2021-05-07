@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04, While</title>
+</head>
+<body>
+    Digite uma frase: <input id="in_frase"><br>
+   Digite a quantidade de vezes para a frase ser exibida: <input id="in_repeticoes"><br>
+   <button onclick="verificar()">Verificar</button> <br>
+   <span id="span1"></span>
+</body>
+</html>
+<script>
+function verificar(){
+    var frase = in_frase.value
+    var repeticoes = in_repeticoes.value
+    var contador = 0
+    if (repeticoes == ''){
+        alert("Quantidade de repetições invalida!")
+    } else {
+        while (contador < repeticoes) {
+            span1.innerHTML += `${frase}<br>` 
+            contador++
+        }
+    }
+}
+</script>
+<!--
+    3. Faça uma versão melhorada do programa anterior no qual:
+a) O usuário informa a quantidade de vezes que quer que a frase repita
+b) Se a quantidade não for informada ou se for menor que 0, exiba um alert "Quantidade inválida" e, claro, não exiba a frase na tela
+-->

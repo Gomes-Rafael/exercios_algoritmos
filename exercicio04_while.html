@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04, While</title>
+</head>
+<body>
+    <button onclick="verificar()">Ver pares</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function verificar(){
+    var numero = 2
+    var final = 100
+    while (numero < final){
+        span1.innerHTML += `${numero}<br>`
+        numero = numero + 2
+    }
+}
+</script>
+<!--
+    4. Crie um programa o qual:
+a) Ao clicar num botão "Ver pares", exiba na tela, um embaixo do outro, todos os inteiros pares entre 1 e 100
+-->

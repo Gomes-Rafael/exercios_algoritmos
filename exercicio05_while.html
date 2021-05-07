@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05, While</title>
+</head>
+<body>
+    Digite a tabuada: <input id="in_tabuada"><br>
+    <button onclick="verificar()">Ver tabuada</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+   
+function verificar(){
+    var contador = 1
+    var tabuada = in_tabuada.value
+    var resultado = 0
+    while (contador <= 10){
+        resultado = tabuada * contador
+    span1.innerHTML += `${resultado}<br>` 
+    contador++  
+    }
+}
+</script>
+<!--
+    5. Crie um programa o qual:
+a) O usuário digita qual a tabuada que quer ver
+b) Ao clicar no botão "Ver tabuada", exibe na página a tabuada do número como no exemplo abaixo, no qual o usuário digitou "3":
+3 x 1 = 3
+...
+3 x 10 = 30
+-->

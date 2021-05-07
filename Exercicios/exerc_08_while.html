@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    De quantos em quantos dias você faz musculação? <input id="in_tempo"><br>
+    <button onclick="exibir()">Exibir rotina mensal</button><br>
+    <span id="span1"></span>
+</body>
+</html>
+<script>
+function exibir(){
+    var tempo = in_tempo.value
+    var contador = 0
+    var mes = 30
+    if (tempo == 3){
+    while (contador < mes) {
+        span1.innerHTML = `Dia 1 - Musculação <br>
+    Dia 2 - Comer, dormir etc <br>
+    Dia 3 - Comer, dormir etc <br>
+    Dia 4 - Musculação <br>
+    Dia 5 - Comer, dormir etc <br>
+    Dia 6 - Comer, dormir etc <br>
+    Dia 7 - Musculação <br>
+    ...`
+    contador ++
+    }
+} else if (tempo == 2){
+    while (contador < mes) {
+        span1.innerHTML = `Dia 1 - Musculação <br>
+    Dia 2 - Comer, dormir etc <br>
+    Dia 3 - Musculação <br>
+    Dia 5 - Comer, dormir etc <br>
+    Dia 6 - Musculação <br>
+    Dia 7 - Comer, dormir etc <br>
+    ...`
+    contador ++
+    }
+} else if (tempo == 4){
+    span1.innerHTML = `Dia 1 - Musculação <br>
+    Dia 2 - Comer, dormir etc <br>
+    Dia 3 - Comer, dormir etc <br>
+    Dia 4 - Comer, dormir etc <br>
+    Dia 5 - Musculação <br>
+    Dia 6 - Comer, dormir etc <br>
+    Dia 7 - Comer, dormir etc <br>
+    Dia 8 - Comer, dormir etc <br>
+    Dia 9 - Musculação <br>
+    ...`
+    contador ++
+} else {
+    span1.innerHTML = `Dia 1 - Musculação <br>
+    Dia 2 - Comer, dormir etc <br>
+    Dia 3 - Comer, dormir etc <br>
+    Dia 4 - Comer, dormir etc <br>
+    Dia 5 - Comer, dormir etc <br>
+    Dia 6 - Musculação <br>
+    Dia 7 - Comer, dormir etc <br>
+    Dia 8 - Comer, dormir etc <br>
+    Dia 9 - Comer, dormir etc <br>
+    Dia 10 - Comer, dormir etc <br>
+    Dia 11 - Musculação <br>
+    ...`
+    contador ++
+}
+}
+</script>
+<!--
+    8. Crie um programa em HTML/JS o qual:
+a) Pergunte de quantos em quantos dias o usuário faz musculação (é só uma informação, só 1 número, ok?)
+b) Ao clicar em "Exibir rotina mensal", mostre uma sequência de 30 frases, como neste exemplo:
+    Dia 1 - Musculação
+    Dia 2 - Comer, dormir etc
+    Dia 3 - Comer, dormir etc
+    Dia 4 - Musculação
+    Dia 5 - Comer, dormir etc
+    Dia 6 - Comer, dormir etc
+    Dia 7 - Musculação
+    ...
+    Dia 30 - Comer, dormir etc
+
+O Dia 1 sempre é de "Musculação"
+Considere que, nesse exemplo, o usuário informou 3 no item a)
+-->

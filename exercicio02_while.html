@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2, While</title>
+</head>
+<body>
+   Digite uma frase qualquer: <input id="in_frase"> <br>
+   <button onclick="verificar()">Verificar</button><br>
+   <span id="span1"></span>
+</body>
+</html>
+<script>
+    function verificar(){
+        var frase = in_frase.value
+        var contador = 0
+        if(frase == ''){
+            alert("Mas cade a frase???")
+        } else {
+            while (contador < 7){
+                span1.innerHTML += `${frase}<br>`
+                contador++
+            }
+        }
+    }
+</script>
+
+<!--
+    2. Faça uma versão melhorada do programa anterior no qual:
+a) O usuário digita a frase que será exibida 7 vezes
+b) Se não tiver digitado nada ao clicar, exiba um alert "Mas qual a frase?" e, claro, não exiba a frase na tela (visto que ela nem existe, afinal)
+-->
