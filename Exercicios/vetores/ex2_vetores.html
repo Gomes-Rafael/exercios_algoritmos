@@ -7,11 +7,34 @@
     <title>Exercicio 2</title>
 </head>
 <body>
-    
+    Digite os lugares para qual voce já viajou: <input id="in_lugares">
+    <button onclick="cadastrar()">Cadastrar Local</button><br>
+    Relembre sua viaje pelo numero: <input id="in_numeroViagem">
+    <button onclick="relembrar()">Relembrar Viagem</button><br>
+    <span id="spanLista"></span>
+    <span style="color: hotpink;" id="spanRelembrar"></span>
 </body>
 </html>
 <script>
-
+    var contador = 0
+    var listaLugares = []
+function cadastrar(){
+    var lugares = in_lugares.value
+    listaLugares.push(lugares)
+    while(contador < listaLugares.length){
+        spanLista.innerHTML += `${listaLugares[contador]} <br>`
+        contador++
+    }
+    in_lugares.value = ""
+}
+function relembrar(){
+    var numeroViagem = in_numeroViagem.value
+    if(numeroViagem > listaLugares.length){
+        alert("Você ainda não cadastrou essa viagem!")
+    }else{
+    spanRelembrar.innerHTML = listaLugares[numeroViagem - 1]
+    }
+}
 </script>
 <!--
 2. Crie um programa onde o usuário vá cadastrando os lugares para onde já viajou. Ele digita o nome do lugar e vai clica em "Cadastrar local".

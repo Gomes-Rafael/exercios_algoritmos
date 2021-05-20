@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input id="in_filmes">
+   <button onclick="cadastrar()">Cadastrar</button> <br>
+   <span id="span1"></span>
+</body>
+</html>
+<script>
+    var lista = []
+    var contador = 0
+function cadastrar(){
+    var filme = in_filmes.value
+    lista.push(filme)
+    var ultimoItem = lista[lista.length - 1]
+    if(contador % 2 == 0){
+        var cor = "red"
+    }else{
+        cor = "blue"
+    }
+    span1.innerHTML += `<div style="color: ${cor};">${ultimoItem}</div>`
+    contador++
+} 
+</script>
+<!--
+    4. Crie um programa no qual o usuário informa os nomes dos filmes que mais gosta. Ele digita e clica em "Cadastrar".
+Na medida em que vai cadastrando, os filmes vão aparecendo um abaixo do outro abaixo do botão. SÓ QUE, aparecem na cor azul, 
+depois vermelho, depois azul, depois vermelho, e assim por diante.
+--> 

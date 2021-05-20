@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Digite seus Filmes favoritos</h1>
+    <input id="in_filmes"> <button onclick="cadastrar()">Cadastrar</button><br>
+    <span id="spanFilmes"></span>
+</body>
+</html>
+<script>
+    var lista = []
+    var contador = 0
+function cadastrar(){
+    var filme = in_filmes.value
+    lista.push(filme)
+    while(contador < lista.length){
+    spanFilmes.innerHTML += `${lista[contador]} <br>`
+    contador++
+    filme =""
+    }
+}
+</script>
+<!--
+    3. Crie um programa no qual o usuário informa os nomes dos filmes que mais gosta. Ele digita e clica em "Cadastrar".
+Na medida em que vai cadastrando, os filmes vão aparecendo um abaixo do outro abaixo do botão.
+-->
