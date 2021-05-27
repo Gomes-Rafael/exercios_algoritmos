@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="in_notas"> <button onclick="cadastrar()">cadastrar</button><br>
+    <input id="in_reverInicial"> <input id="in_reverFinal"> <button onclick="rever()">Rever Notas</button><br>
+    <span id="spanCadastrar"></span>
+    <span id="spanRever"></span>
+</body>
+
+</html>
+<script>
+    var listaNotas = []
+    var somatoria = 0
+    function cadastrar() {
+        var notas = Number(in_notas.value)
+        listaNotas.push(notas)
+        for (contador = 0; contador < listaNotas.length; contador++) {
+            somatoria += listaNotas[contador]
+        }
+        notas = 0
+    }
+    function rever() {
+        var reverInicial = in_reverInicial.value
+        var reverFinal = in_reverFinal.value
+        for (contador = 0; contador < listaNotas.length; contador++) {
+            if (listaNotas[contador] >= reverInicial && listaNotas[contador] <= reverFinal) {
+                spanCadastrar.innerHTML += `${listaNotas[contador]}<br>`
+
+                spanRever.innerHTML = `<br> Foram cadastras ${listaNotas.length} notas que estão no intervalo de ${listaNotas[0]} 
+                até ${listaNotas[contador]} e a média dessas notas é ${somatoria / listaNotas.length}`
+            }
+        }
+    }
+</script>
+<!--
+    8. Crie um programa no qual:
+
+a)  O usuário vá cadastrando a nota dos alunos. Ele digita a nota e clica em "Cadastrar Nota".
+b) Deve haver outros dois campos, onde ele digita dois números, indicando o intervalo de notas que ele quer analisar, e clica em "Rever as notas".
+c) O programa deve mostrar todas as notas cadastradas que estão no intervalo informado no item b).
+d) Ao final emitir a seguinte mensagem: “Foram cadastras XX notas que estão no intervalo de  YY até ZZ e a média dessas notas é MM,M”,
+-->

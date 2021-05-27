@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ex 5 vetores</title>
 </head>
+
 <body>
-    
+    <input id="in_alunos"><br>
+    <button onclick="cadastar()">Cadastrar</button><br>
+    <span id="span1"></span>
 </body>
+
 </html>
 <script>
-
+    var listaAlunos = []
+    function cadastar() {
+        var nomeAluno = in_alunos.value
+        listaAlunos.push(nomeAluno) 
+        var tamanhoLista = listaAlunos.length
+        span1.innerHTML = ""
+        for (var contador = tamanhoLista-1; contador >= 0; contador--) {
+            span1.innerHTML += `${listaAlunos[contador]}<br>`
+            nomeAluno = ""
+        }
+    }
 </script>
 <!--
     5. Crie um programa no qual o usuário vai cadastrando nomes de alunos.

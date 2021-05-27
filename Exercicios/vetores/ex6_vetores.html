@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6 vetores</title>
+</head>
+<body>
+    <input id="in_listaAlunos"> <button onclick="cadastrar()">cadastrar</button><br>
+    <span id="span1"></span> <br>
+        pesquisar aluno: <input id="in_pesquisar"> <button onclick="pesquisar()">pesquisar</button>
+    
+</body>
+</html>
+<script>
+    var listaAlunos = ["isabella", "pedro", "fernando", "carol"]
+    span1.innerHTML = ""
+    function cadastrar() {
+        var alunoInserido = in_listaAlunos.value
+        if (listaAlunos.indexOf(alunoInserido) > 0) {
+            alert('Este aluno já está na lista')
+        } else {
+            listaAlunos.push(alunoInserido)
+            span1.innerHTML += `${listaAlunos}<br>`
+        }
+    }
+    function pesquisar() {
+        var pesquisa = in_pesquisar.value
+        if (listaAlunos.indexOf(pesquisa) > 0) {
+            alert('este aluno já está em sua lista')
+        } else {
+            alert('aluno ainda não inserido')
+        }
+    }
+</script>
+
+<!--
+    6. Crie um programa em HTML/JS em que:
+
+a) Tenha uma lista de alunos e um botão para cadastrar novos (mostre como a lista está a cada novo aluno inserido).
+b) Ao tentar inserir um aluno, verifique se já não existe na lista - caso exista, não insira-o.
+c) Tenha um campo para pesquisar alunos, onde o usuário possa verificar se o aluno em questão já existe 
+    (se existir, exiba um alert com a frase "O aluno X já existe na lista").
+*Obs o campo para pesquisar alunos pode ser o mesmo para inserir novos.
+-->
